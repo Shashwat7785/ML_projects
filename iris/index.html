@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+   <link rel = "Stylesheet" href = "{{url_for('static',filename='css/style_ml.css')}}">
+</head>
+
+<body>
+ <div class="login">
+    <div class = "nav"><h1>Iris Flower Class Prediction</h1></div>
+
+    <form action="{{ url_for('predict')}}"method="post" class="action">
+    	<input type="text" name="Sepal_Length" placeholder="Sepal_Length_cm" required="required" />
+        <input type="text" name="Sepal_Width" placeholder="Sepal_Width_cm" required="required" />
+		<input type="text" name="Petal_Length" placeholder="Petal_Length_cm" required="required" />
+		<input type="text" name="Petal_Width" placeholder="Petal_Width_cm" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   <div class = "out">
+    {% if prediction_image %}
+        <img  src="{{ url_for('static', filename='images/' + prediction_image) }}" alt="Predicted Flower" style="width:300px;height:300px;">
+    {% endif %}
+   </div>
+    <p class = "output">{{ prediction_text }}</p>
+ </div>
+</body>
+</html>

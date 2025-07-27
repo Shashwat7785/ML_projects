@@ -1,0 +1,33 @@
+body{
+   background-color: black;
+}
+.nav{
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    background-color: yellowgreen;
+    color: darkgreen;
+}
+.action{
+      position: relative;
+    left: 20px;
+    background-color:  #0d4715;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.output{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    background-color: yellowgreen;
+}
+.out{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
